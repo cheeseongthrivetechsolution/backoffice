@@ -1,4 +1,4 @@
-//Form submit
+//Login Submit callback from recaptcha
 function onSubmit(token) {
   $(".errorMsg").hide();
   let username = document.loginForm.username;
@@ -19,10 +19,30 @@ function onSubmit(token) {
     recaptcha: token,
     lang: config.lang,
   }
-  Common.login(postData); //common/common.js
+  //Login
+  $.ajax({
+    url: API_ENDPOINT + "user/login.php",
+    dataType: "json",
+    type: "POST",
+    data: postData,
+    success: function(data) {
+      data = Common.parseObj(data);
+      if(data.code == 200) {
+        window.localStorage.token = data.token;
+        window.localStorage.username = postData.username;
+        window.location.replace("pages/index.html");
+      } else {
+        Message.addAlert(data.msg,data.code)
+      }
+    },
+    error: function(data) {
+      console.log("data error");
+    }
+  });
 }
 
 $(function() {
+  //Define actions
   $("#zh_translator").on("click", function() {
   	Language.setLanguage("ZH");
   });

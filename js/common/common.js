@@ -1,5 +1,4 @@
-const API_ENDPOINT = config.apiUrl;
-
+//Common use function declaration
 const Message = {
     popSnack: function (cls) {
       var x = document.getElementById("snackbar");
@@ -13,7 +12,7 @@ const Message = {
         $('#snackbar').remove();
       }
       var cls = "success";
-      if (code == "500")
+      if (code == "500" || code == "401")
         cls = "danger";
       var snackbar = '<div id="snackbar">'+message+'</div>';
       $('body').append(snackbar);
@@ -43,64 +42,6 @@ const Common = {
       }
       return data;
     },
-    getIndexInfo: function () {
-      var params = {
-        lang: config.lang,
-        token: Common.getToken()
-      };
-      $.ajax({
-          url: API_ENDPOINT + "user/getIndexInfo.php",
-          type: "GET",
-          data: params,
-          success: function(data) {
-              data = Common.parseObj(data);
-              Common.skipIndex(data);
-              if (data.code == 200){
-                $(".profileImage").attr('src', data.row.avatar);
-                $("#profileName").text(data.row.name);
-                if (data.row.sound == 0) {
-                  $("#speaker i").removeClass("mdi-music");
-                  $("#speaker i").addClass("mdi-music-off");
-                }
-
-              } else {
-                Message.addAlert(data.msg,data.code);
-              }
-          },
-          error: function(data) {
-              console.log(data);
-          }
-      });
-    },
-    speaker: function () {
-      var params = {
-        lang: config.lang,
-        token: Common.getToken()
-      };
-      $.ajax({
-          url: API_ENDPOINT + "user/soundSwitch.php",
-          type: "PUT",
-          data: params,
-          success: function(data) {
-              data = Common.parseObj(data);
-              Common.skipIndex(data);
-              if (data.code == 200){
-                if ($("#speaker i").hasClass("fa-volume-up")) {
-                  $("#speaker i").removeClass("fa-volume-up");
-                  $("#speaker i").addClass("fa-volume-mute");
-                } else {
-                  $("#speaker i").addClass("fa-volume-up");
-                  $("#speaker i").removeClass("fa-volume-mute");
-                }
-              } else {
-                Message.addAlert(data.msg,data.code);
-              }
-          },
-          error: function(data) {
-              console.log(data);
-          }
-      });
-    },
     skipIndex: function (data) {
       if(data.code == 401) {
   		    localStorage.clear();
@@ -112,48 +53,4 @@ const Common = {
     getToken: function () {
 	    return window.localStorage.token == undefined ? "" : window.localStorage.token;
     },
-    logout: function () {
-      var params = {
-        lang: config.lang,
-        token: Common.getToken()
-      };
-      $.ajax({
-          url: API_ENDPOINT + "user/logout.php",
-          type: "GET",
-          data: params,
-          success: function(data) {
-              data = Common.parseObj(data);
-              if(data.code == 200 || data.code == 401) {
-  		          localStorage.clear();
-                window.location.href = "../index.html";
-              } else {
-                Message.addAlert(data.msg,data.code);
-              }
-          },
-          error: function(data) {
-              console.log("data error");
-          }
-      });
-    },
-    login: function (postData) {
-      $.ajax({
-        url: API_ENDPOINT + "user/login.php",
-        dataType: "json",
-        type: "POST",
-        data: postData,
-        success: function(data) {
-          data = Common.parseObj(data);
-          if(data.code == 200) {
-            window.localStorage.token = data.token;
-            window.localStorage.username = postData.username;
-            window.location.replace("pages/index.html");
-          } else {
-            Message.addAlert(data.msg,data.code)
-          }
-        },
-        error: function(data) {
-          console.log("data error");
-        }
-      });
-    }
 };

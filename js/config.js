@@ -29,6 +29,8 @@ if (env == "stagingEnv") {
 	config.imgUrl = "development-image-path-here";
 }
 
+const API_ENDPOINT = config.apiUrl;
+
 $(function() {
 	Common.translation(); //common/common.js
 });
