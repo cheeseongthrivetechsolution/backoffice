@@ -23821,7 +23821,7 @@ hr.horizontal.gray-light {
   }
 
   .sidenav.fixed-start+.main-content {
-    margin-left: 16rem;
+    margin-left: 15.5rem;
   }
 
   .sidenav.fixed-end+.main-content {
@@ -24121,7 +24121,7 @@ body:not(.dark-version) .sidenav.bg-transparent .collapse .nav-item .nav-link.ac
   }
 
   .g-sidenav-hidden .navbar-vertical.fixed-start+.main-content {
-    margin-left: 7.5rem;
+    margin-left: 6rem;
   }
 
   .g-sidenav-hidden .navbar-vertical .navbar-brand img {
@@ -24184,7 +24184,7 @@ body:not(.dark-version) .sidenav.bg-transparent .collapse .nav-item .nav-link.ac
   }
 
   .g-sidenav-hidden .navbar-vertical:hover.fixed-start+.main-content {
-    margin-left: 17.125rem;
+    margin-left: 15.7rem;
   }
 
   .g-sidenav-hidden .navbar-vertical:hover .navbar-brand span {

@@ -1,25 +1,26 @@
 //Environment Setting productionEnv or stagingEnv  or developmentEnv
 var env = "developmentEnv";
 
-//Page Language
-const Language = {
-    getLanguage: function () {
-      localStorage.getItem('language') == null ? Language.setLanguage('ZH') : false;
-    	return localStorage.getItem('language');
-    },
-    setLanguage: function (lang) {
-      	localStorage.setItem('language', lang);
-        location.reload();
-    },
-};
-
 //Site settings
 var config = {
-  apiUrl: "production-api-path-here",
+  apiUrl: "https://ultraflex.com/",
   imgUrl: "production-image-path-here",
   pageSizenum: 30,
-  lang : Language.getLanguage(),
+  lang : 'EN',
 }
+
+//Page Language from localStorage
+const Language = {
+  setLanguage: function (lang) {
+      localStorage.setItem('language', lang);
+      config.lang = lang;
+  },
+  getLanguage: function () {
+    localStorage.getItem('language') == null ? Language.setLanguage('ZH') : false;
+  	config.lang = localStorage.getItem('language');
+  	return localStorage.getItem('language');
+  },
+};
 
 if (env == "stagingEnv") {
 	config.apiUrl = 'staging-api-path-here';
@@ -32,5 +33,6 @@ if (env == "stagingEnv") {
 const API_ENDPOINT = config.apiUrl;
 
 $(function() {
+  Language.getLanguage();
 	Common.translation(); //common/common.js
 });

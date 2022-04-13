@@ -5,6 +5,9 @@ var language = {
 		"logout" : "登出",
 		"sound" : "声音",
 		"my_profile" : "我的用户资料",
+		"confirm_logout" : "确定登出？",
+		"cancel" : "取消",
+		"confirm" : "确认",
 	},
 	'en' : {
 		"title" : "Ultraflex Back Office",
@@ -12,5 +15,8 @@ var language = {
 		"logout" : "Sign out",
 		"sound" : "Sound",
 		"my_profile" : "My Profile",
+		"confirm_logout" : "Confirm logout?",
+		"cancel" : "Cancel",
+		"confirm" : "Confirm",
 	}
 };

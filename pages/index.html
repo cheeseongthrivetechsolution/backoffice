@@ -6,17 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title class="translation" key="title"></title>
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.2" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link id="pagestyle" href="../assets/css/material-dashboard.css" rel="stylesheet" />
+  <script src="../assets/js/jquery.js"></script>
+  <script src="../assets/js/fontawesome.js"></script>
   <script type="text/javascript" src="../js/localization/pages/index.js" ></script>
-  <style>
-    .contentIframe{
-      width: 100%;
-      min-height:740px;
-      height:320px;
-    }
-  </style>
+  <style>.contentIframe{width: 100%;min-height:740px;}</style>
 </head>
 <body class="g-sidenav-show bg-gray-200 d-flex flex-column min-vh-100">
   <aside class="sidenav navbar navbar-vertical navbar-expand-xs fixed-start bg-gradient-dark" id="sidenav-main">
@@ -30,42 +24,47 @@
     <hr class="horizontal light mt-0 mb-2">
     <div class="collapse navbar-collapse  w-auto  max-height-vh-100" id="sidenav-collapse-main">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a data-bs-toggle="collapse" href="#dashboardsExamples" class="nav-link text-white active" aria-controls="dashboardsExamples" role="button" aria-expanded="false">
+        <li class="nav-item sideMain">
+          <a data-bs-toggle="collapse" href="#dashboardsExamples" class="nav-link text-white" aria-controls="dashboardsExamples" role="button" aria-expanded="false">
             <i class="fa fa-cog"></i>
             <span class="nav-link-text ms-2 ps-1">Site Setting</span>
           </a>
           <div class="collapse" id="dashboardsExamples" style="">
             <ul class="nav">
-              <li class="nav-item ">
-                <a class="nav-link text-white iframePath" href="dashboard.html" target="contentIframe">
-                  <span class="sidenav-normal ms-5"> Departments </span>
+              <li class="nav-item">
+                <a class="nav-link text-white iframePath" href="department/index.html" target="contentIframe">
+                  <span class="sidenav-mini-icon">1.1</span>
+                  <span class="sidenav-normal ms-2"> Department </span>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white iframePath" href="dashboard.html" target="contentIframe">
-                  <span class="sidenav-normal ms-5"> Discover </span>
+                  <span class="sidenav-mini-icon">1.2</span>
+                  <span class="sidenav-normal ms-2"> Role Level </span>
                 </a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link text-white iframePath" href="billing.html" target="contentIframe">
-                  <span class="sidenav-normal ms-5"> Sales </span>
+                  <span class="sidenav-mini-icon">1.3</span>
+                  <span class="sidenav-normal ms-2"> Permission </span>
                 </a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link text-white iframePath" href="dashboard.html" target="contentIframe">
-                  <span class="sidenav-normal ms-5"> Automotive </span>
+                  <span class="sidenav-mini-icon">1.4</span>
+                  <span class="sidenav-normal ms-2"> Automotive </span>
                 </a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link text-white iframePath" href="dashboard.html" target="contentIframe">
-                  <span class="sidenav-normal ms-5"> Smart Home </span>
+                  <span class="sidenav-mini-icon">1.5</span>
+                  <span class="sidenav-normal ms-2"> Smart Home </span>
                 </a>
               </li>
             </ul>
           </div>
         </li>
-        <li class="nav-item">
+        <li class="nav-item sideMain">
           <a class="nav-link text-white " href="#">
               <i class="fa fa-cog cursor-pointer"></i>
             <span class="nav-link-text ms-2 ps-1">Tables</span>
@@ -82,6 +81,15 @@
           <nav aria-label="breadcrumb">
             <h6 class="font-weight-bolder mb-0">Dashboard</h6>
           </nav>
+          <div class="sidenav-toggler sidenav-toggler-inner d-xl-block d-none px-3">
+            <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav2">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </a>
+          </div>
           <div class="ms-md-auto pe-md-3 d-flex align-items-center"></div>
           <ul class="navbar-nav  justify-content-end">
             <li class="nav-item dropdown d-flex align-items-center">
@@ -128,7 +136,7 @@
               </div>
             </li>
             <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
-              <a href="javascript:;" class="nav-link text-body p-0" id="iconNavbarSidenav">
+              <a href="javascript:;" class="nav-link text-body p-0 iconNavbarSidenav" id="iconNavbarSidenav">
                 <div class="sidenav-toggler-inner">
                   <i class="sidenav-toggler-line"></i>
                   <i class="sidenav-toggler-line"></i>
@@ -141,7 +149,7 @@
       </div>
     </nav>
     <!-- End Navbar -->
-    <div class="container-fluid py-4 w-100 h-100">
+    <div class="container-fluid py-3 px-3 w-100 h-100">
       <div class="w-100 h-100">
         <iframe src="" id="contentIframe" name="contentIframe" class="contentIframe"></iframe>
       </div>
@@ -163,7 +171,7 @@
         </div>
         <div class="float-end mt-4">
           <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
-            <i class="fa fa-close"></i>
+            <i class="fa fa-close fa-lg"></i>
           </button>
         </div>
         <!-- End Toggle Button -->
@@ -183,26 +191,6 @@
               <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#logoutModal">
                 <span class="translation" key="logout"></hspan>
               </button>
-              <!-- Modal -->
-              <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title font-weight-normal" id="exampleModalLabel">Modal title</h5>
-                      <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn bg-gradient-primary" id="logout">Save changes</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -218,9 +206,29 @@
           </div>
         </div>
         <hr class="horizontal dark my-sm-4">
-        <a class="btn bg-gradient-primary px-3 mb-2 w-100 fixed-plugin-close-button iframePath" href="dashboard.html" target="contentIframe">
+        <a class="btn bg-gradient-primary px-3 mb-2 w-100 fixed-plugin-close-button iframePath" href="profile/index.html" target="contentIframe">
           <span class="translation" key="my_profile"></span>
         </a>
+      </div>
+    </div>
+  </div>
+  <!-- Logout Modal -->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title font-weight-normal" id="exampleModalLabel"><span class="translation" key="logout"></span></h5>
+          <button type="button" class="btn-close text-dark" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <span class="translation" key="confirm_logout"></span>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal"><span class="translation" key="cancel"></span></button>
+          <button type="button" class="btn bg-gradient-primary" id="logout"><span class="translation" key="confirm"></span></button>
+        </div>
       </div>
     </div>
   </div>

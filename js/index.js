@@ -21,7 +21,7 @@ function onSubmit(token) {
   }
   //Login
   $.ajax({
-    url: API_ENDPOINT + "user/login.php",
+    url: API_ENDPOINT + "user/login",
     dataType: "json",
     type: "POST",
     data: postData,
@@ -45,8 +45,10 @@ $(function() {
   //Define actions
   $("#zh_translator").on("click", function() {
   	Language.setLanguage("ZH");
+    Common.translation();
   });
   $("#en_translator").on("click", function() {
   	Language.setLanguage("EN");
+    Common.translation();
   });
 });

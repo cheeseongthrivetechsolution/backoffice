@@ -6,7 +6,7 @@ const Index = {
       token: Common.getToken()
     };
     $.ajax({
-        url: API_ENDPOINT + "user/getIndexInfo.php",
+        url: API_ENDPOINT + "user/getIndexInfo",
         type: "GET",
         data: params,
         success: function(data) {
@@ -58,7 +58,7 @@ const Index = {
       token: Common.getToken()
     };
     $.ajax({
-        url: API_ENDPOINT + "user/soundSwitch.php",
+        url: API_ENDPOINT + "user/soundSwitch",
         type: "PUT",
         data: params,
         success: function(data) {
@@ -104,10 +104,16 @@ $(function() {
     Index.speaker();
   });
   $(".zh_translator").on("click", function() {
+    $("button[class*='en_translator']").removeClass("active");
+    $("button[class*='zh_translator']").addClass("active");
     Language.setLanguage("ZH");
+    Common.translation();
   });
   $(".en_translator").on("click", function() {
+    $("button[class*='en_translator']").addClass("active");
+    $("button[class*='zh_translator']").removeClass("active");
     Language.setLanguage("EN");
+    Common.translation();
   });
   //Get Language for default active Button
   var buttonLanguage = Language.getLanguage();

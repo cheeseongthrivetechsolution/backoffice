@@ -594,13 +594,19 @@ window.onload = function() {
 
 // Toggle Sidenav
 const iconNavbarSidenav = document.getElementById('iconNavbarSidenav');
+const iconNavbarSidenav2 = document.getElementById('iconNavbarSidenav2');
 const iconSidenav = document.getElementById('iconSidenav');
 const sidenav = document.getElementById('sidenav-main');
 let body = document.getElementsByTagName('body')[0];
 let className = 'g-sidenav-pinned';
+let className2 = 'g-sidenav-hidden';
 
 if (iconNavbarSidenav) {
   iconNavbarSidenav.addEventListener("click", toggleSidenav);
+}
+
+if (iconNavbarSidenav2) {
+  iconNavbarSidenav2.addEventListener("click", toggleSidenav2);
 }
 
 if (iconSidenav) {
@@ -617,6 +623,22 @@ function toggleSidenav() {
 
   } else {
     body.classList.add(className);
+    sidenav.classList.add('bg-white');
+    sidenav.classList.remove('bg-transparent');
+    iconSidenav.classList.remove('d-none');
+  }
+}
+
+function toggleSidenav2() {
+  if (body.classList.contains(className2)) {
+    body.classList.remove(className2);
+    setTimeout(function() {
+      sidenav.classList.remove('bg-white');
+    }, 100);
+    sidenav.classList.remove('bg-transparent');
+
+  } else {
+    body.classList.add(className2);
     sidenav.classList.add('bg-white');
     sidenav.classList.remove('bg-transparent');
     iconSidenav.classList.remove('d-none');

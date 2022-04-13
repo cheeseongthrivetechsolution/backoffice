@@ -31,6 +31,17 @@ const Common = {
             $(this).text(language[lang][$(this).attr('key')]);
           }
       });
+      if ($('#contentIframe').length) {
+        $('#contentIframe').contents().find('.translation').each(function(){
+          var element = $(this);
+          if( element.is('input') || element.is('textarea')) {
+              $(this).attr("placeholder",language[lang][$(this).attr('key')]);
+            } else {
+              $(this).text(language[lang][$(this).attr('key')]);
+            }
+        });
+      }
+
     },
     parseObj: function (jsondata) {
       var data = null;
@@ -44,10 +55,9 @@ const Common = {
     },
     skipIndex: function (data) {
       if(data.code == 401) {
-  		    localStorage.clear();
-          alert(data.msg)
-          window.location.href = "../index.html";
-          return;
+		    localStorage.clear();
+        alert(data.msg)
+        parent.location.href = "../index.html";
       }
     },
     getToken: function () {
