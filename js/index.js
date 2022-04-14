@@ -30,7 +30,7 @@ function onSubmit(token) {
       if(data.code == 200) {
         window.localStorage.token = data.token;
         window.localStorage.username = postData.username;
-        window.location.replace("pages/home.html");
+        window.location.replace("home.html");
       } else {
         Common.addAlert(data.msg,data.code)
       }

@@ -4,63 +4,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon.png">
   <title class="translation" key="title"></title>
-   <link href="../../assets/css/material-kit.min.css" rel="stylesheet" />
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
   <script src="../../assets/js/jquery.js"></script>
   <script type="text/javascript" src="../../js/localization/pages/profile.js" ></script>
 </head>
 <body>
-  <div class="bd-example" data-example-id="">
-    <form>
-      <div class="form-group">
-        <label for="exampleFormControlInput1">Email address</label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Example select</label>
-        <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlSelect2">Example multiple select</label>
-        <select multiple class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect2">
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="exampleFormControlTextarea1">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-    </form>
-</div>
+  <div class="m-3">
+    <form class="row g-3">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputPassword4">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress2" class="form-label">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label">City</label>
+    <input type="text" class="form-control" id="inputCity">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label">State</label>
+    <select id="inputState" class="form-select">
+      <option selected>Choose...</option>
+      <option>...</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label">Zip</label>
+    <input type="text" class="form-control" id="inputZip">
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </div>
+</form>
+  </div>
 </body>
-<!--   Core JS Files   -->
-<script src="../../assets/js/core/jquery.min.js" type="text/javascript"></script>
-<script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
-<script src="../../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
-<script src="../../assets/js/core/moment.min.js"></script>
-<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
-<script src="../../assets/js/core/bootstrap-datetimepicker.js" type="text/javascript"></script>
-<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="../../assets/js/core/nouislider.min.js" type="text/javascript"></script>
-<!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
-<script src="../../assets/js/core/bootstrap-tagsinput.js"></script>
-<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
-<script src="../../assets/js/core/bootstrap-selectpicker.js" type="text/javascript"></script>
-<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
-<script src="../../assets/js/core/jasny-bootstrap.min.js" type="text/javascript"></script>
-<!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
-<script src="../../assets/js/material-kit.js" type="text/javascript"></script>
+  <script src="../../assets/js/bootstrap.bundle.min.js"></script>
   <script src="../../js/config.js"></script>
   <script src="../../js/common.js"></script>
 </body>
