@@ -1,0 +1,11 @@
+{
+  "language" : "语言",
+  "title_login" : "登入后台系统",
+  "title_login2" : "输入您的详细信息以登录您的帐户：",
+  "username" : "用户名",
+  "password" : "密码",
+  "signin" : "登入",
+  "suggest" : "推荐的浏览器",
+  "usernameErr" : "请输入用户名",
+  "passwordErr" : "请输入密码",
+}

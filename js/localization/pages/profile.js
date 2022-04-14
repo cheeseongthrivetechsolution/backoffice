@@ -1,0 +1,30 @@
+var language = {
+	'zh' :{
+		"title" : "用户资料",
+		"basic_info" : "基本信息",
+		"name" : "姓名",
+		"email" : "邮箱地址",
+		"phone" : "手机号",
+		"dob" : "生日日期",
+		"gender" : "性别",
+		"save" : "保存",
+		"change_pass" : "更换密码",
+		"current_pass" : "现密码",
+		"new_pass" : "新密码",
+		"confirm_pass" : "确认新密码",
+	},
+	'en' : {
+		"title" : "Profile",
+		"basic_info" : "Basic Info",
+		"name" : "Name",
+		"email" : "Email Address",
+		"phone" : "Phone",
+		"dob" : "Date of birth",
+		"gender" : "Gender",
+		"save" : "Save",
+		"change_pass" : "Change Password",
+		"current_pass" : "Current Password",
+		"new_pass" : "New password",
+		"confirm_pass" : "Confirm New Password",
+	}
+};

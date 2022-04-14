@@ -10,16 +10,8 @@ var config = {
 }
 
 //Page Language from localStorage
-const Language = {
-  setLanguage: function (lang) {
-      localStorage.setItem('language', lang);
-      config.lang = lang;
-  },
-  getLanguage: function () {
-    localStorage.getItem('language') == null ? Language.setLanguage('ZH') : false;
-  	config.lang = localStorage.getItem('language');
-  	return localStorage.getItem('language');
-  },
+const Index = {
+
 };
 
 if (env == "stagingEnv") {
@@ -33,6 +25,6 @@ if (env == "stagingEnv") {
 const API_ENDPOINT = config.apiUrl;
 
 $(function() {
-  Language.getLanguage();
-	Common.translation(); //common/common.js
+  Common.getLanguage();
+	Common.translation();
 });

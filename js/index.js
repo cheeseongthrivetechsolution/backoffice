@@ -30,9 +30,9 @@ function onSubmit(token) {
       if(data.code == 200) {
         window.localStorage.token = data.token;
         window.localStorage.username = postData.username;
-        window.location.replace("pages/index.html");
+        window.location.replace("pages/home.html");
       } else {
-        Message.addAlert(data.msg,data.code)
+        Common.addAlert(data.msg,data.code)
       }
     },
     error: function(data) {
@@ -44,11 +44,11 @@ function onSubmit(token) {
 $(function() {
   //Define actions
   $("#zh_translator").on("click", function() {
-  	Language.setLanguage("ZH");
+  	Common.setLanguage("ZH");
     Common.translation();
   });
   $("#en_translator").on("click", function() {
-  	Language.setLanguage("EN");
+  	Common.setLanguage("EN");
     Common.translation();
   });
 });

@@ -6,83 +6,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <title class="translation" key="title"></title>
-  <link id="pagestyle" href="../../assets/css/material-dashboard.min.css" rel="stylesheet" />
+   <link href="../../assets/css/material-kit.min.css" rel="stylesheet" />
   <script src="../../assets/js/jquery.js"></script>
-  <script src="../../assets/js/fontawesome.js"></script>
-  <script type="text/javascript" src="../../js/localization/pages/index.js" ></script>
+  <script type="text/javascript" src="../../js/localization/pages/profile.js" ></script>
 </head>
-<body class="g-sidenav-show bg-gray-200 d-flex flex-column min-vh-100">
-  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
-    <div class="m-4">
-      <div class="card card-body" id="profile">
-        <div class="row justify-content-center align-items-center">
-          <div class="col-sm-auto col-4">
-            <div class="avatar avatar-xl position-relative">
-              <img src="../../../assets/img/bruce-mars.jpg" alt="bruce" class="w-100 rounded-circle shadow-sm">
-            </div>
-          </div>
-          <div class="col-sm-auto col-8 my-auto">
-            <div class="h-100">
-              <h5 class="mb-1 font-weight-bolder">
-                Richard Davis
-              </h5>
-              <p class="mb-0 font-weight-normal text-sm">
-                CEO / Co-Founder
-              </p>
-            </div>
-          </div>
-        </div>
+<body>
+  <div class="bd-example" data-example-id="">
+    <form>
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
       </div>
-      <div class="card mt-4" id="basic-info">
-        <div class="card-header">
-          <h5>Basic Info</h5>
-        </div>
-        <div class="card-body pt-0">
-          <div class="input-group input-group-outline">
-            <label class="form-label">Current password</label>
-            <input type="password" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
-          </div>
-          <div class="input-group input-group-outline my-4">
-            <label class="form-label">New password</label>
-            <input type="password" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
-          </div>
-          <div class="input-group input-group-outline">
-            <label class="form-label">Confirm New password</label>
-            <input type="password" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
-          </div>
-          <button class="btn bg-gradient-dark btn-sm float-end mt-6 mb-0">Update password</button>
-        </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
       </div>
-
-      <div class="card mt-4" id="password">
-        <div class="card-header">
-          <h5>Change Password</h5>
-        </div>
-        <div class="card-body pt-0">
-          <div class="input-group input-group-outline">
-            <label class="form-label">Current password</label>
-            <input type="password" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
-          </div>
-          <div class="input-group input-group-outline my-4">
-            <label class="form-label">New password</label>
-            <input type="password" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
-          </div>
-          <div class="input-group input-group-outline">
-            <label class="form-label">Confirm New password</label>
-            <input type="password" class="form-control" onfocus="focused(this)" onfocusout="defocused(this)">
-          </div>
-          <button class="btn bg-gradient-dark btn-sm float-end mt-6 mb-0">Update password</button>
-        </div>
+      <div class="form-group">
+        <label for="exampleFormControlSelect2">Example multiple select</label>
+        <select multiple class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect2">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
       </div>
-    </div>
-  </main>
-  <!--   Core JS Files   -->
-  <script src="../../assets/js/core/bootstrap.min.js"></script>
-  <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../../assets/js/material-dashboard.min.js"></script>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </form>
+</div>
+</body>
+<!--   Core JS Files   -->
+<script src="../../assets/js/core/jquery.min.js" type="text/javascript"></script>
+<script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="../../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+<script src="../../assets/js/core/moment.min.js"></script>
+<!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+<script src="../../assets/js/core/bootstrap-datetimepicker.js" type="text/javascript"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="../../assets/js/core/nouislider.min.js" type="text/javascript"></script>
+<!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+<script src="../../assets/js/core/bootstrap-tagsinput.js"></script>
+<!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+<script src="../../assets/js/core/bootstrap-selectpicker.js" type="text/javascript"></script>
+<!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+<script src="../../assets/js/core/jasny-bootstrap.min.js" type="text/javascript"></script>
+<!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
+<script src="../../assets/js/material-kit.js" type="text/javascript"></script>
   <script src="../../js/config.js"></script>
-  <script src="../../js/common/common.js"></script>
-  <script src="../../js/pages/profile.js"></script>
+  <script src="../../js/common.js"></script>
 </body>
 
 </html>

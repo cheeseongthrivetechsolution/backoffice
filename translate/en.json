@@ -1,0 +1,11 @@
+{
+  "language" : "Language",
+  "title_login" : "Sign In To Back Office",
+  "title_login2" : "Enter your details to login to your account:",
+  "username" : "Username",
+  "password" : "Password",
+  "signin" : "Sign In",
+  "suggest" : "Suggested browsers",
+  "usernameErr" : "Please enter username",
+  "passwordErr" : "Please enter password",
+}
