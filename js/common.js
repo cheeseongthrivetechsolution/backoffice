@@ -1,27 +1,39 @@
 //Common use function declaration
 const Common = {
+  readTextFile: function(file, callback) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.overrideMimeType("application/json");
+      rawFile.open("GET", file, true);
+      rawFile.onreadystatechange = function() {
+          if (rawFile.readyState === 4 && rawFile.status == "200") {
+              callback(rawFile.responseText);
+          }
+      }
+      rawFile.send(null);
+  },
   translation: function () {
-
     var lang = config.lang.toLowerCase();
-
-    $('.translation').each(function(index,element){
-      var element = $(this);
-      if( element.is('input') || element.is('textarea')) {
-          $(this).attr("placeholder",language[lang][$(this).attr('key')]);
-        } else {
-          $(this).text(language[lang][$(this).attr('key')]);
+    Common.readTextFile("../../translate/"+lang+".json", function(text){
+        var data = JSON.parse(text);
+        $('.translation').each(function(index,element){
+          var element = $(this);
+          if( element.is('input') || element.is('textarea')) {
+              $(this).attr("placeholder",data[$(this).attr('key')]);
+            } else {
+              $(this).text(data[$(this).attr('key')]);
+            }
+        });
+        if ($('#contentIframe').length) {
+          $('#contentIframe').contents().find('.translation').each(function(){
+            var element = $(this);
+            if( element.is('input') || element.is('textarea')) {
+                $(this).attr("placeholder",data[$(this).attr('key')]);
+              } else {
+                $(this).text(data[$(this).attr('key')]);
+              }
+          });
         }
     });
-    if ($('#contentIframe').length) {
-      $('#contentIframe').contents().find('.translation').each(function(){
-        var element = $(this);
-        if( element.is('input') || element.is('textarea')) {
-            $(this).attr("placeholder",language[lang][$(this).attr('key')]);
-          } else {
-            $(this).text(language[lang][$(this).attr('key')]);
-          }
-      });
-    }
   },
   parseObj: function (jsondata) {
     var data = null;
@@ -35,9 +47,9 @@ const Common = {
   },
   skipIndex: function (data) {
     if(data.code == 401) {
-	    localStorage.clear();
       alert(data.msg)
-      parent.location.href = "../index.html";
+  	  localStorage.clear();
+      parent.location.href = "../../index.html";
     }
   },
   getToken: function () {
@@ -54,9 +66,9 @@ const Common = {
     if ($('#snackbar').length > 0) {
       $('#snackbar').remove();
     }
-    var cls = "success";
+    var cls = "bg-success";
     if (code == "500" || code == "401")
-      cls = "danger";
+      cls = "bg-danger";
     var snackbar = '<div id="snackbar">'+message+'</div>';
     $('body').append(snackbar);
     Common.popSnack(cls);

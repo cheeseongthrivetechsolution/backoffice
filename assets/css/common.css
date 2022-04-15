@@ -14,18 +14,6 @@
   top: 30px; /* 30px from the bottom */
 }
 
-#snackbar.primary {
-  background-color: #333; /* Black background color */
-}
-
-#snackbar.danger {
-  background-color: #e75d5d; /* Black background color */
-}
-
-#snackbar.success {
-  background-color: ##8eb78; /* Black background color */
-}
-
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
 #snackbar.show {
   visibility: visible; /* Show the snackbar */
@@ -54,4 +42,10 @@
 @keyframes fadeout {
   from {top: 30px; opacity: 1;}
   to {top: 0; opacity: 0;}
+}
+
+.errorMsg{
+  display: none;
+  color: red;
+  font-size: 12px;
 }

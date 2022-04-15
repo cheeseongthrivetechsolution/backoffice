@@ -15,6 +15,8 @@ const Home = {
             if (data.code == 200){
               $(".profileImage").attr('src', data.row.avatar);
               $(".profileName").append(data.row.name);
+              $(".departmentName").text(data.row.department);
+              $(".positionName").text(data.row.position);
               if (data.row.sound == 0) {
                 $(".speakerOnOff i").removeClass("fa-volume-up");
                 $(".speakerOnOff i").addClass("fa-volume-mute");
