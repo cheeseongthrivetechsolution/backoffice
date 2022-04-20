@@ -20,7 +20,7 @@
 	"home_cancel" : "取消",
 	"home_confirm" : "确认",
 
-	"_profile.html": "profile.html",
+	"_profile_page": "profile_page",
 	"profile_title" : "用户资料",
 	"profile_basic_info" : "基本信息",
 	"profile_name" : "姓名",
@@ -46,5 +46,30 @@
 	"profile_curPassErr" : "请输入当前密码",
 	"profile_newPassErr" : "请输入新密码",
 	"profile_conNewPassErr" : "请输入确认新密码",
-	"profile_conNewPassErrEqual" : "新密码不一样"
+	"profile_conNewPassErrEqual" : "新密码不一样",
+
+	"_department_page": "department_page",
+	"department_title": "部门",
+	"department_name": "名称",
+	"department_sequence": "顺序",
+	"department_remark": "备注",
+	"department_status": "状态",
+	"department_created_at": "创建于",
+	"department_created_by": "创建人",
+	"department_updated_at": "更新于",
+	"department_updated_by": "更新人",
+
+	"_common_btn" : "common_btn",
+	"btn_cancel" : "取消",
+	"btn_confirm" : "确定",
+	"btn_save" : "保存",
+	"btn_reset" : "重置",
+	"btn_search" : "查寻",
+	"btn_add" : "添加",
+	"btn_export" : "导出",
+
+	"_common_select" : "common_select",
+	"select_active" : "启用",
+	"select_deactive" : "停用",
+	"select_deleted" : "已删除"
 }

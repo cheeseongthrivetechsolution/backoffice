@@ -3,12 +3,12 @@ function onSubmit(token) {
   $(".errorMsg").hide();
   let username = document.loginForm.username;
   let password = document.loginForm.password;
-  if( username.value.trim() == "" ) {
+  if(username.value.trim() == "" ) {
      username.focus();
      $(".usernameErr").show();
      return false;
   }
-  if( password.value.trim() == "" ) {
+  if(password.value.trim() == "" ) {
      password.focus();
      $(".passwordErr").show();
      return false;
@@ -27,6 +27,7 @@ function onSubmit(token) {
     data: postData,
     success: function(data) {
       data = Common.parseObj(data);
+      localStorage.clear();
       if(data.code == 200) {
         window.localStorage.token = data.token;
         window.localStorage.username = postData.username;

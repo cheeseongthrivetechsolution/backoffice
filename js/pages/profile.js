@@ -50,8 +50,8 @@ const Profile = {
         return false;
       }
     }
-    $('#saveProfile').find('i').removeClass('d-none');
-    $('#saveProfile').prop("disabled",true);
+    $('#saveProfileBtn').find('i').removeClass('d-none');
+    $('#saveProfileBtn').prop("disabled",true);
     Profile.updateBasic()
   },
   updateBasic : function(){
@@ -69,8 +69,8 @@ const Profile = {
         type: "PUT",
         data: params,
         success: function(data) {
-            $('#saveProfile').find('i').addClass('d-none');
-            $('#saveProfile').prop("disabled",false);
+            $('#saveProfileBtn').find('i').addClass('d-none');
+            $('#saveProfileBtn').prop("disabled",false);
             data = Common.parseObj(data);
             Common.skipIndex(data);
             if (data.code == 200){
@@ -79,8 +79,8 @@ const Profile = {
             Common.addAlert(data.msg,data.code);
         },
         error: function(data) {
-          $('#saveProfile').find('i').addClass('d-none');
-          $('#saveProfile').prop("disabled",false);
+          $('#saveProfileBtn').find('i').addClass('d-none');
+          $('#saveProfileBtn').prop("disabled",false);
           console.log(data);
         }
     });
@@ -127,8 +127,8 @@ const Profile = {
         return false;
       }
     }
-    $('#savePassword').find('i').removeClass('d-none');
-    $('#savePassword').prop("disabled",true);
+    $('#savePasswordBtn').find('i').removeClass('d-none');
+    $('#savePasswordBtn').prop("disabled",true);
     Profile.updatePassword();
   },
   updatePassword : function(){
@@ -144,8 +144,8 @@ const Profile = {
         type: "PUT",
         data: params,
         success: function(data) {
-            $('#savePassword').find('i').addClass('d-none');
-            $('#savePassword').prop("disabled",false);
+            $('#savePasswordBtn').find('i').addClass('d-none');
+            $('#savePasswordBtn').prop("disabled",false);
             data = Common.parseObj(data);
             Common.skipIndex(data);
             Common.addAlert(data.msg,data.code);
@@ -154,8 +154,8 @@ const Profile = {
             $("#confirm_new_pass").val("");
         },
         error: function(data) {
-          $('#saveProfile').find('i').addClass('d-none');
-          $('#saveProfile').prop("disabled",false);
+          $('#savePasswordBtn').find('i').addClass('d-none');
+          $('#savePasswordBtn').prop("disabled",false);
           console.log(data);
         }
     });
@@ -177,10 +177,10 @@ $(function() {
     todayHighlight: true,
   });
   //Define actions
-  $( "#saveProfile" ).click(function(e) {
+  $( "#saveProfileBtn" ).click(function(e) {
     Profile.validateBasic();
   });
-  $( "#savePassword" ).click(function(e) {
+  $( "#savePasswordBtn" ).click(function(e) {
     $("#passwordRequirement span").removeClass("text-danger");
     Profile.validatePassword();
   });

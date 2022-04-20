@@ -10,10 +10,6 @@ var config = {
 }
 
 //Page Language from localStorage
-const Index = {
-
-};
-
 if (env == "stagingEnv") {
 	config.apiUrl = 'staging-api-path-here';
 	config.imgUrl = "staging-image-path-here";

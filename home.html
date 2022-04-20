@@ -88,6 +88,53 @@
           </div>
           <div class="ms-md-auto pe-md-3 d-flex align-items-center"></div>
           <ul class="navbar-nav  justify-content-end">
+            <li class="nav-item dropdown d-flex align-items-center pe-3">
+              <a href="javascript:;" class="nav-link text-body p-0 position-relative" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-language"></i>
+                <span class="position-absolute top-5 start-100 translate-middle badge rounded-pill bg-danger border border-white small py-1 px-2">
+                  <span class="small">11</span>
+                  <span class="visually-hidden">unread notifications</span>
+                </span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end p-2 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex align-items-center py-1">
+                      <span class="material-icons">email</span>
+                      <div class="ms-2">
+                        <h6 class="text-sm font-weight-normal my-auto">
+                          Check new messages
+                        </h6>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="mb-2">
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex align-items-center py-1">
+                      <span class="material-icons">podcasts</span>
+                      <div class="ms-2">
+                        <h6 class="text-sm font-weight-normal my-auto">
+                          Manage podcast session
+                        </h6>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item border-radius-md" href="javascript:;">
+                    <div class="d-flex align-items-center py-1">
+                      <span class="material-icons">shopping_cart</span>
+                      <div class="ms-2">
+                        <h6 class="text-sm font-weight-normal my-auto">
+                          Payment successfully completed
+                        </h6>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </li>
             <li class="nav-item dropdown d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa fa-language cursor-pointer fa-lg"></i>
@@ -190,7 +237,7 @@
             </div>
           </div>
         </div>
-        <div class="d-flex">
+        <div class="d-flex mt-3">
           <button class="btn bg-gradient-dark px-3 mb-2 zh_translator" data-class="bg-gradient-dark">中文</button>
           <button class="btn bg-gradient-dark px-3 mb-2 ms-2 en_translator" data-class="bg-white">English</button>
         </div>
@@ -222,8 +269,8 @@
           <span class="translation" key="home_confirm_logout"></span>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal"><span class="translation" key="home_cancel"></span></button>
-          <button type="button" class="btn bg-gradient-primary" id="logout"><span class="translation" key="home_confirm"></span></button>
+          <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal"><span class="translation" key="btn_cancel"></span></button>
+          <button type="button" class="btn bg-gradient-primary" id="logout"><span class="translation" key="btn_confirm"></span></button>
         </div>
       </div>
     </div>
@@ -232,8 +279,6 @@
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/perfect-scrollbar.min.js"></script>
   <script src="assets/js/material-dashboard.js"></script>
-  <script src="../../assets/js/bootstrap-datetimepicker.min.js"></script>
-  <script src="../../assets/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
   <script src="js/config.js"></script>
   <script src="js/common.js"></script>
   <script src="js/home.js"></script>
