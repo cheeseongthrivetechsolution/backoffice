@@ -29,8 +29,8 @@ const Department = {
 $(function() {
   Department.getDepartmentList();
   $("#addForm").change();
-  $("addBtn").on("click", function(){
-  
-    $('#addForm', window.parent.document).modal('toggle');   
+  $("#addBtn").on("click", function(){
+
+    window.parent.$('#asd').modal('show');
   })
 });
