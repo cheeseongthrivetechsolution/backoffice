@@ -19,15 +19,17 @@ function onSubmit(token) {
     recaptcha: token,
     lang: config.lang,
   }
+  $('#login_btn').prop("disabled",true)
   //Login
   $.ajax({
-    url: API_ENDPOINT + "user/login",
+    url: API_ENDPOINT + "user/login.php",
     dataType: "json",
     type: "POST",
     data: postData,
     success: function(data) {
+      $('#login_btn').prop("disabled",false)
       data = Common.parseObj(data);
-      localStorage.clear();
+      localStorage.setItem("iframePath","");
       if(data.code == 200) {
         window.localStorage.token = data.token;
         window.localStorage.username = postData.username;
@@ -38,6 +40,7 @@ function onSubmit(token) {
     },
     error: function(data) {
       console.log("data error");
+      $('#login_btn').prop("disabled",false)
     }
   });
 }

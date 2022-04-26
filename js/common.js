@@ -75,10 +75,10 @@ const Common = {
   },
   setLanguage: function (lang) {
       localStorage.setItem('language', lang);
-      config.lang = lang;
+      config.lang = lang; 
   },
   getLanguage: function () {
-    localStorage.getItem('language') == null ? Common.setLanguage('ZH') : false;
+    localStorage.getItem('language') == null ? Common.setLanguage('EN') : false;
   	config.lang = localStorage.getItem('language');
   },
 };

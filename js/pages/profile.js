@@ -18,7 +18,7 @@ const Profile = {
       token: Common.getToken()
     };
     $.ajax({
-        url: API_ENDPOINT + "user/getUserInfo",
+        url: API_ENDPOINT + "user/getUserInfo.php",
         type: "GET",
         data: params,
         success: function(data) {
@@ -65,7 +65,7 @@ const Profile = {
       token: Common.getToken()
     };
     $.ajax({
-        url: API_ENDPOINT + "user/updateBasic",
+        url: API_ENDPOINT + "user/updateBasic.php",
         type: "PUT",
         data: params,
         success: function(data) {
@@ -140,7 +140,7 @@ const Profile = {
       token: Common.getToken()
     };
     $.ajax({
-        url: API_ENDPOINT + "user/updatePassword",
+        url: API_ENDPOINT + "user/updatePassword.php",
         type: "PUT",
         data: params,
         success: function(data) {

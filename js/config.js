@@ -14,7 +14,7 @@ if (env == "stagingEnv") {
 	config.apiUrl = 'staging-api-path-here';
 	config.imgUrl = "staging-image-path-here";
 } else if (env == "developmentEnv") {
-	config.apiUrl = '//ultraflex.api/';
+	config.apiUrl = 'http://13.212.174.225/ultraflex-api/bo-api/';
 	config.imgUrl = "development-image-path-here";
 }
 

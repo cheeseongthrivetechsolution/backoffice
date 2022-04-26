@@ -21,7 +21,7 @@
 	"home_confirm" : "确认",
 
 	"_profile_page": "profile_page",
-	"profile_title" : "用户资料",
+	"profile_title" : "更改用户",
 	"profile_basic_info" : "基本信息",
 	"profile_name" : "姓名",
 	"profile_nameErr" : "请输入姓名",
@@ -47,6 +47,7 @@
 	"profile_newPassErr" : "请输入新密码",
 	"profile_conNewPassErr" : "请输入确认新密码",
 	"profile_conNewPassErrEqual" : "新密码不一样",
+	"edit_user_text" : "编辑用户详细信息并保存更改",
 
 	"_department_page": "department_page",
 	"department_title": "部门",

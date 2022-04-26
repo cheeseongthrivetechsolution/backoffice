@@ -6,7 +6,7 @@ const Home = {
       token: Common.getToken()
     };
     $.ajax({
-        url: API_ENDPOINT + "user/getIndexInfo",
+        url: API_ENDPOINT + "user/getIndexInfo.php",
         type: "GET",
         data: params,
         success: function(data) {

@@ -7,7 +7,7 @@ const Department = {
     };
     var result;
     $.ajax({
-        url: API_ENDPOINT + "department/getDepartmentList",
+        url: API_ENDPOINT + "department/getDepartmentList.php",
         type: "GET",
         data: params,
         success: function(data) {
@@ -24,6 +24,13 @@ const Department = {
   }
 }
 
+
+
 $(function() {
   Department.getDepartmentList();
+  $("#addForm").change();
+  $("addBtn").on("click", function(){
+  
+    $('#addForm', window.parent.document).modal('toggle');   
+  })
 });

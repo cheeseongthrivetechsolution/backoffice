@@ -21,7 +21,7 @@
 	"home_confirm_logout" : "Confirm logout?",
 
 	"_profile.html": "profile.html",
-	"profile_title" : "Profile",
+	"profile_title" : "Edit User",
 	"profile_basic_info" : "Basic Info",
 	"profile_name" : "Name",
 	"profile_nameErr" : "Please enter name",
@@ -46,6 +46,7 @@
 	"profile_newPassErr" : "Please enter new password",
 	"profile_conNewPassErr" : "Please enter confirm new password",
 	"profile_conNewPassErrEqual" : "New password not same",
+	"edit_user_text" : "Edit user details and save changes",
 
 	"_department.html": "department.html",
 	"department_title": "Department",
