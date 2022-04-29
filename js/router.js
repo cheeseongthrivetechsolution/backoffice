@@ -6,13 +6,16 @@ const route = (event) => {
 };
 
 const routes = {
-    404: "pages/404.html",
-    "/": "home.html",
-    "/department": "www.google.com",
+    404: "/pages/404.html",
+    "/": "index.html",
+    "/index": "index.html",
+    "/department": "pages/department/index.html",
 };
 
 const handleLocation = async () => {
     const path = window.location.pathname;
+    if (path == '/' || path == '/index.html')
+      return;
     const route = routes[path] || routes[404];
     const html = await fetch(route).then((data) => data.text());
     document.getElementById("main-content").innerHTML = html;

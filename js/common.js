@@ -13,7 +13,7 @@ const Common = {
   },
   translation: function () {
     var lang = config.lang.toLowerCase();
-    Common.readTextFile("../../translate/"+lang+".json", function(text){
+    Common.readTextFile("translate/"+lang+".json", function(text){
         var data = JSON.parse(text);
         $('.translation').each(function(index,element){
           var element = $(this);
@@ -49,7 +49,7 @@ const Common = {
     if(data.code == 401) {
       alert(data.msg)
   	  localStorage.clear();
-      parent.location.href = "../../index.html";
+      parent.location.href = "login.html";
     }
   },
   getToken: function () {
