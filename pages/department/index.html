@@ -93,34 +93,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
-            <td><button class="btn-edit">Edit</button></td>
-          </tr>
-          <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>2011/07/25</td>
-            <td>$170,750</td>
-            <td><button class="btn-edit">Edit</button></td>
-          </tr>
-          <tr>
-            <td>Ashton Cox</td>
-            <td>Junior Technical Author</td>
-            <td>San Francisco</td>
-            <td>66</td>
-            <td>2009/01/12</td>
-            <td>$86,000</td>
-            <td><button class="btn-edit">Edit</button></td>
-          </tr>
-
+          
         </tbody>
         <!-- <tfoot>
           <tr>
@@ -150,49 +123,8 @@
 <script src="../../js/common.js"></script>
 <script src="../../js/pages/department.js"></script>
 <script>
-  $(document).ready(function () {
-    $('#example').DataTable({
-      responsive: false,
-
-      // DOM Layout settings
-      dom: `<'row'<'col-sm-12'tr>>
-          <'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7 dataTables_pager'lp>>`,
-
-      lengthMenu: [5, 10, 25, 50],
-
-      pageLength: 50,
-
-      language: {
-        'lengthMenu': 'Display _MENU_',
-      },
-
-      // Order settings
-      order: [
-        [6, 'desc']
-      ],
-      // order: [[5, 'asc']],
-
-      columnDefs: [],
-
-      "footerCallback": function (row, data, start, end, display) {
-        var totalAmount = 0;
-        for (var i = 0; i < data.length; i++) {
-          totalAmount += parseFloat(data[i][2]);
-        }
-        totalAmount = totalAmount.toFixed(2);
-
-        var api = this.api();
-        $(api.column(2).footer()).html(totalAmount);
-      },
-
-      // "drawCallback": function (settings) {
-      //   table.wrap("<div class='table-responsive'></div>");
-      // },
-      "initComplete": function () {
-        $("#kt_datatable").css('display', 'table');
-        $("#loading2").fadeOut();
-      }
-    });
+  
+    
 
     // table.on('change', '.group-checkable', function () {
     //   var set = $(this).closest('table').find('td:first-child .checkable');
@@ -213,7 +145,7 @@
     //   $(this).parents('tr').toggleClass('active');
     // });
 
-  });
+
 </script>
 </body>
 
