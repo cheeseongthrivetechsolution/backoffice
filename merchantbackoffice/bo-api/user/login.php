@@ -10,15 +10,12 @@
   // Instantiate DB & connect
   $database = new Database();
   $db = $database->connect();
-
   // Instantiate translate
   $translate = new Translate();
-  // Instantiate blog post object
+  // Instantiate user object
   $user = new User($db);
   //prepare respond array
-  $respond_array = array( 'code' => 500,
-                          'msg' => '',
-                          'token' => '');
+  $respond_array = array('code' => 500, 'msg' => '', 'token' => '');
   //Get request
   parse_str(file_get_contents("php://input"),$put_vars);
   $username = isset($put_vars["username"]) ? $put_vars["username"] : "";
@@ -45,7 +42,7 @@
   curl_setopt($curlx, CURLOPT_HEADER, 0);
   curl_setopt($curlx, CURLOPT_RETURNTRANSFER, 1);
   curl_setopt($curlx, CURLOPT_POST, 1);
-  $verify_data =  [ 'secret' => '6LdCK1cfAAAAAMpSvzND9MI6w6HBEx1DtXHVoOal', //<--- your reCaptcha secret key
+  $verify_data =  [ 'secret' => getenv('captcha'), //<--- your reCaptcha secret key
   	                'response' => $recaptcha];
   curl_setopt($curlx, CURLOPT_POSTFIELDS, $verify_data);
   $resp = json_decode(curl_exec($curlx));

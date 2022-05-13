@@ -1,7 +1,22 @@
 {
-  "whitelist0000" : "Valid IP",
+  "success" : "Success",
+
+
+
+  
   "whitelist0001" : "Invalid IP",
   "whitelist0002" : "IP is empty",
+
+
+
+
+
+
+
+
+
+
+
   "m20000" : "Action Success!",
   "m20001" : "User not active!",
   "m20002" : "Success update basic info!",

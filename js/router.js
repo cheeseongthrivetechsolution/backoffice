@@ -7,7 +7,7 @@ const route = (event) => {
 
 var routes = {
     404 : "pages/404.html",
-    "/department" : "pages/department/index.html",
+    "/department" : "pages/systemSetting/department.html",
     "/dashboard" : "pages/dashboard/index.html",
 };
 
@@ -29,6 +29,7 @@ const handleLocation = async () => {
     const route = routes[path]|| routes[404];
     const html = await fetch(route).then((data) => data.text());
     setInnerHtml(document.querySelector('#main-content'), html);
+    Common.translation();
 };
 
 window.onpopstate = handleLocation;

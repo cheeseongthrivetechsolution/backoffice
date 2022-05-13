@@ -2,7 +2,9 @@
 	//Defining environment DEV = development, STAGING = staging, PROD = production;
 	$environment = "DEV";
 	putenv("environment=".$environment);
-	
+	//captcha secret
+	$captchaSecret = "6LdCK1cfAAAAAMpSvzND9MI6w6HBEx1DtXHVoOal";
+	putenv("captcha=".$captchaSecret);
 	//Database variable default value
 	$host = "localhost";
 	$db_name = "ultraflex_v2";
@@ -13,6 +15,7 @@
 	$access_origin = "frontend-production-url";
 	$content_type = "application/json";
 	$access_control_allow_headers = "Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With";
+
 
 	if ($environment == 'DEV') {
 		$host = "localhost";
